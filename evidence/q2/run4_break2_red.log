@@ -1,0 +1,63 @@
+test	Run unit tests	﻿2026-10-26T15:11:36.4261807Z ##[group]Run python -m unittest -v CalcTest
+test	Run unit tests	2026-10-26T15:11:36.4263030Z [36;1mpython -m unittest -v CalcTest[0m
+test	Run unit tests	2026-10-26T15:11:36.4721003Z shell: /usr/bin/bash -e {0}
+test	Run unit tests	2026-10-26T15:11:36.4721841Z env:
+test	Run unit tests	2026-10-26T15:11:36.4722524Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run unit tests	2026-10-26T15:11:36.4723617Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+test	Run unit tests	2026-10-26T15:11:36.4724649Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run unit tests	2026-10-26T15:11:36.4725587Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run unit tests	2026-10-26T15:11:36.4726531Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run unit tests	2026-10-26T15:11:36.4727481Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+test	Run unit tests	2026-10-26T15:11:36.4728293Z ##[endgroup]
+test	Run unit tests	2026-10-26T15:11:37.4479334Z test_add (CalcTest.TestCalculator.test_add) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4481630Z test_divide (CalcTest.TestCalculator.test_divide) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4537536Z test_modulo (CalcTest.TestCalculator.test_modulo) ... FAIL
+test	Run unit tests	2026-10-26T15:11:37.4540046Z test_modulo_by_zero (CalcTest.TestCalculator.test_modulo_by_zero) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4542007Z test_modulo_invalid_input (CalcTest.TestCalculator.test_modulo_invalid_input) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4543897Z test_multiply (CalcTest.TestCalculator.test_multiply) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4545249Z test_power (CalcTest.TestCalculator.test_power) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4546571Z test_power_invalid_input (CalcTest.TestCalculator.test_power_invalid_input) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4548051Z test_power_negative_exponent (CalcTest.TestCalculator.test_power_negative_exponent) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4549865Z test_power_no_real_result (CalcTest.TestCalculator.test_power_no_real_result) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4550871Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4551657Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4552734Z test_power_overflow (CalcTest.TestCalculator.test_power_overflow) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4553984Z test_subtract (CalcTest.TestCalculator.test_subtract) ... ok
+test	Run unit tests	2026-10-26T15:11:37.4554745Z 
+test	Run unit tests	2026-10-26T15:11:37.4555297Z ======================================================================
+test	Run unit tests	2026-10-26T15:11:37.4556257Z FAIL: test_modulo (CalcTest.TestCalculator.test_modulo)
+test	Run unit tests	2026-10-26T15:11:37.4557271Z ----------------------------------------------------------------------
+test	Run unit tests	2026-10-26T15:11:37.4558208Z Traceback (most recent call last):
+test	Run unit tests	2026-10-26T15:11:37.4567771Z   File "/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/CalcTest.py", line 73, in test_modulo
+test	Run unit tests	2026-10-26T15:11:37.4569792Z Overflow error: the result is too large.
+test	Run unit tests	2026-10-26T15:11:37.4570477Z Overflow error: the result is too large.
+test	Run unit tests	2026-10-26T15:11:37.4571132Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4571843Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4572492Z Overflow error: the result is too large.
+test	Run unit tests	2026-10-26T15:11:37.4573164Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4573893Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4574560Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4575215Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4575967Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4577325Z     self.assertEqual(calc.modulo(-7, 3), 2)
+test	Run unit tests	2026-10-26T15:11:37.4578036Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4579219Z     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+test	Run unit tests	2026-10-26T15:11:37.4580200Z AssertionError: -1.0 != 2
+test	Run unit tests	2026-10-26T15:11:37.4580908Z 
+test	Run unit tests	2026-10-26T15:11:37.4581480Z ----------------------------------------------------------------------
+test	Run unit tests	2026-10-26T15:11:37.4582515Z Ran 12 tests in 0.007s
+test	Run unit tests	2026-10-26T15:11:37.4583078Z 
+test	Run unit tests	2026-10-26T15:11:37.4583521Z FAILED (failures=1)
+test	Run unit tests	2026-10-26T15:11:37.4589446Z Overflow error: the result is too large.
+test	Run unit tests	2026-10-26T15:11:37.4590158Z Overflow error: the result is too large.
+test	Run unit tests	2026-10-26T15:11:37.4591227Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4591972Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4592708Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4593467Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4594214Z Overflow error: the result is too large.
+test	Run unit tests	2026-10-26T15:11:37.4594893Z Overflow error: the result is too large.
+test	Run unit tests	2026-10-26T15:11:37.4595556Z Overflow error: the result is too large.
+test	Run unit tests	2026-10-26T15:11:37.4596211Z Overflow error: the result is too large.
+test	Run unit tests	2026-10-26T15:11:37.4596951Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4597746Z Invalid input: both arguments must be numbers.
+test	Run unit tests	2026-10-26T15:11:37.4690350Z ##[error]Process completed with exit code 1.

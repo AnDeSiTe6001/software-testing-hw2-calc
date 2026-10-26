@@ -1,0 +1,11 @@
+The GitHub Actions CI build for my repository AnDeSiTe6001/software-testing-hw2-calc is failing on the main branch. Please make the build pass.
+
+A clone of the repository is here (work ONLY in this folder; do not read or search other folders on this machine):
+C:/Users/josep/AppData/Local/Temp/claude/C--Users-josep-Documents-Software-Testing-2026-HW2/d27258f4-686c-4fcd-859c-756ca0e0bd54/scratchpad/q2_agent/repo
+
+You can use git and the gh CLI (already logged in) for this repository. A Python 3.13 interpreter is available at:
+C:/Users/josep/Documents/Software_Testing_2026/HW2/.venv/Scripts/python.exe
+
+When your fix is ready, commit it and push it to main, then confirm that the CI run on GitHub passes.
+
+When you are done, reply with: (1) what you found was causing the failure, (2) exactly what you changed (the full diff), (3) the commit hash you pushed, and (4) the result of the CI run.
