@@ -64,6 +64,14 @@ class TestCalculator(unittest.TestCase):
         result = calc.divide(1e308, 1e-308)
         self.assertEqual(result, None)
 
+    def test_divide_by_zero(self):
+        calc = Calculator()
+        # Found by branch coverage (Q3): no test reached the zero-divisor check
+        with self.assertRaises(ValueError):
+            calc.divide(10, 0)
+        with self.assertRaises(ValueError):
+            calc.divide(10, 0.0)
+
     def test_modulo(self):
         calc = Calculator()
         self.assertEqual(calc.modulo(7, 3), 1)  # Expect 7 % 3 = 1
