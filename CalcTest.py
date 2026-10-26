@@ -74,6 +74,14 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calc.modulo(7, -3), -2)
         self.assertEqual(calc.modulo(-7, -3), -1)
 
+    def test_modulo_by_zero(self):
+        calc = Calculator()
+        # Decision (c): same as divide, modulo by zero raises ValueError
+        with self.assertRaises(ValueError):
+            calc.modulo(7, 0)
+        with self.assertRaises(ValueError):
+            calc.modulo(7, 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()
