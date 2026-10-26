@@ -93,6 +93,8 @@ class Calculator:
 
         try:
             c = a ** b
+            if isinstance(c, complex):
+                raise ValueError("The result is not a real number")
             if isinstance(c, float) and math.isinf(c):
                 raise OverflowError("the result is too large.")
             if isinstance(c, int) and (c < self.INT32_MIN or c > self.INT32_MAX):
