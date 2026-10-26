@@ -82,6 +82,15 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             calc.modulo(7, 0.0)
 
+    def test_modulo_invalid_input(self):
+        calc = Calculator()
+        # Same as the other operations: non-numbers return None
+        self.assertEqual(calc.modulo('7', 3), None)
+        self.assertEqual(calc.modulo(7, '3'), None)
+        self.assertEqual(calc.modulo('7', '3'), None)
+        # Like divide, input type is checked before the zero divisor
+        self.assertEqual(calc.modulo('7', 0), None)
+
 
 if __name__ == "__main__":
     unittest.main()
