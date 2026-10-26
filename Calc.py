@@ -72,3 +72,9 @@ class Calculator:
             raise ValueError("The result is not a real number")
 
         return c
+
+    def negate(self, a):
+        if not self._valid_inputs(a, 0):
+            return None
+
+        return -a
