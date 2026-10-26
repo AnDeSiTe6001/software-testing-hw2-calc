@@ -3,7 +3,7 @@
 ## 0. 環境與工具
 
 | 項目 | 內容 |
-|---|---|
+|----------------------|------------------------------------------------------------------------------|
 | 語言／測試框架 | Python 3.13.7、`unittest` |
 | Property-based testing | `hypothesis` 6.170.11（僅第 7 題使用） |
 | AI coding agent | Claude Code 2.1.274（Claude 桌面應用程式 Code 分頁） |
@@ -50,7 +50,7 @@ HW2/
 agent 在寫任何 modulo/power 測試**之前**，用一次四題的選擇題詢問這四個決策。每題都附上候選語意與範例，agent 也標出它建議的選項（Recommended）。我四題都選了建議選項：
 
 | 決策 | 我的選擇 | 編碼在哪個測試 |
-|---|---|---|
+|------------------|----------------------------------------------------|------------------------------|
 | modulo 遇到負數運算元 | **Floored**（餘數正負號跟除數，與 Python 相同）：`modulo(-7, 3) == 2`、`modulo(7, -3) == -2` | `test_modulo`（cycle 1） |
 | modulo 除以零 | **raise `ValueError`**（與第 1 題 `divide` 一致） | `test_modulo_by_zero`（cycle 2） |
 | `power(0, 0)` | **回傳 1** | `test_power`（cycle 4） |
@@ -156,7 +156,7 @@ agent 把它們抽成兩個 helper：`_valid_inputs(a, b)` 與 `_calculate(opera
 逐項對照規則 (a)(b)(c)：
 
 | 規則 | 結果 | 證據 |
-|---|---|---|
+|------------------------------|---------------------------------------------|-------------------------|
 | (a) 每個 cycle 先寫一個失敗的測試，並展示失敗輸出 | **遵守**。8 個 cycle 的測試在實作前都是紅燈 | `evidence/q6/cycle1..8_red.txt` |
 | (a) 不可先寫實作 | **遵守**。每個 `feat` commit 都在對應的 `test` commit 之後 | `git log`（6.6） |
 | (b) 測試先經我審查才實作 | **遵守**。每個測試都經過選擇題審查並核准 | 本對話紀錄（附錄 G） |
@@ -359,7 +359,7 @@ Invalid input: both arguments must be numbers.
 `Q7/test_properties.py` 的每個測試都**不寫死預期值**，只檢查多次呼叫之間應成立的關係。同一組測試同時跑在兩個實作上：`AgentCalc`（新 agent 寫的）與 `Q1Calc`（我第 1 題寫的）。每個測試由 hypothesis 產生 500 組輸入，並用 `derandomize=True` 讓結果可以重現。
 
 | 測試 | 關係 | 輸入範圍 |
-|---|---|---|
+|---------------------------------|---------------------------------------------|----------------------|
 | `test_subtract_undoes_add` | `subtract(add(a,b), b) == a`（題目給的例子） | int32 整數，跳過溢位 |
 | `test_divide_undoes_multiply` | `divide(multiply(a,b), b) == a` | 乘積不會溢位的整數，b ≠ 0 |
 | `test_add_is_commutative` | `add(a,b) == add(b,a)` | ±2⁷⁰ 的整數 |
@@ -375,7 +375,7 @@ Invalid input: both arguments must be numbers.
 **有。** 18 個測試中 4 個失敗（完整輸出：`evidence/q7_properties_run.txt`）：
 
 | 測試 | AgentCalc | Q1Calc（我的） | hypothesis 縮減後的反例 |
-|---|---|---|---|
+|--------------------------------|----------|----------|------------------------------------------------|
 | `test_number_minus_itself_is_zero` | **FAIL** | pass | `subtract(2**63, 2**63)` → `None`（應為 0） |
 | `test_int_and_float_inputs_agree` | pass\* | **FAIL** | `add(0, 2147483648)` → `None`，但 `add(0.0, 2147483648.0)` → `2147483648.0` |
 | `test_subtract_undoes_add_for_floats` | **FAIL** | **FAIL** | `subtract(add(1.0, 2.0**53), 2.0**53)` → `0.0`（應約為 1.0） |
@@ -396,33 +396,32 @@ Invalid input: both arguments must be numbers.
 
 `Q7/probe.py` 用同一組輸入跑兩個實作（完整輸出：`evidence/q7_probe.txt`）：
 
-```text
-call                                                  agent Calc                my Q1 Calc                
-add(7, 8)                                             15                        15                        
-add(-5, 5)                                            0                         0                         
-subtract(100, 1)                                      99                        99                        
-subtract(-3, 9)                                       -12                       -12                       
-multiply(-3, 7)                                       -21                       -21                       
-multiply(0, 12345)                                    0                         0                         
-divide(7, 2)                                          3.5                       3.5                       
-divide(-9, 3)                                         -3.0                      -3.0                      
-add(0.1, 0.2)                                         0.30000000000000004       0.30000000000000004       
-add(2147483647, 1)                                    2147483648                None                        <-- differ
-add(4611686018427387904, 4611686018427387904)         None                      None                      
-add(4.611686018427388e+18, 4.611686018427388e+18)     9.223372036854776e+18     9.223372036854776e+18     
-subtract(9223372036854775808, 9223372036854775808)    None                      0                           <-- differ
-add(100000000000000000000, -100000000000000000000)    None                      0                           <-- differ
-divide(1, 0)                                          None                      raises ValueError           <-- differ
-divide(0, 0)                                          None                      raises ValueError           <-- differ
-add(True, 1)                                          None                      2                           <-- differ
-add(nan, 1)                                           None                      nan                         <-- differ
-add(inf, 1)                                           None                      None                      
-```
+| 呼叫 | agent Calc | 我的 Q1 Calc | 差異 |
+|--------------------------------------------------|--------------------|--------------------|----------|
+| `add(7, 8)` | `15` | `15` |  |
+| `add(-5, 5)` | `0` | `0` |  |
+| `subtract(100, 1)` | `99` | `99` |  |
+| `subtract(-3, 9)` | `-12` | `-12` |  |
+| `multiply(-3, 7)` | `-21` | `-21` |  |
+| `multiply(0, 12345)` | `0` | `0` |  |
+| `divide(7, 2)` | `3.5` | `3.5` |  |
+| `divide(-9, 3)` | `-3.0` | `-3.0` |  |
+| `add(0.1, 0.2)` | `0.30000000000000004` | `0.30000000000000004` |  |
+| `add(2147483647, 1)` | `2147483648` | `None` | 不同 |
+| `add(4611686018427387904, 4611686018427387904)` | `None` | `None` |  |
+| `add(4.611686018427388e+18, 4.611686018427388e+18)` | `9.223372036854776e+18` | `9.223372036854776e+18` |  |
+| `subtract(9223372036854775808, 9223372036854775808)` | `None` | `0` | 不同 |
+| `add(100000000000000000000, -100000000000000000000)` | `None` | `0` | 不同 |
+| `divide(1, 0)` | `None` | `raises ValueError` | 不同 |
+| `divide(0, 0)` | `None` | `raises ValueError` | 不同 |
+| `add(True, 1)` | `None` | `2` | 不同 |
+| `add(nan, 1)` | `None` | `nan` | 不同 |
+| `add(inf, 1)` | `None` | `None` |  |
 
 第 1 題的測試沒有規範的地方，兩個 agent／人各自做了不同的選擇：
 
 | 行為 | AgentCalc | 我的 Q1Calc |
-|---|---|---|
+|------------------------------|-----------------------------------|-----------------------------------|
 | 整數上限 | int64（agent 自己挑的） | int32 |
 | 輸入是否檢查範圍 | 是（超過 int64 的輸入回傳 `None`） | 否（只檢查結果） |
 | `divide(x, 0)` | 回傳 `None` | raise `ValueError` |
@@ -1070,7 +1069,7 @@ for op, a, b in CASES:
 ### G.1 工具資訊
 
 | 題目 | 工具 | 模型 | 版本 |
-|---|---|---|---|
+|----------------------|--------------------------------------|-------------------------|---------------|
 | 第 6 題 | Claude Code（Claude 桌面應用程式 Code 分頁） | Claude Opus 5.5（`claude-opus-5-5`） | Claude Code 2.1.274 |
 | 第 7 題（寫 Calc） | Claude Code 子代理（general-purpose，全新 context） | Claude Opus 5.5（`claude-opus-5-5`） | Claude Code 2.1.274 |
 | 第 7 題（property 測試） | 同第 6 題的主 session | 同上 | 同上 |
@@ -1087,7 +1086,7 @@ for op, a, b in CASES:
 之後的互動都是透過 agent 提出的選擇題進行。下表依序列出問題原文與我的回答原文：
 
 | # | Agent 的問題（原文） | 我的回答（原文） |
-|---|---|---|
+|-----|-----------------------------------------------------------------|------------------------------|
 | 1 | Q6(c) 決策 1：modulo 遇到負數運算元時，結果該怎麼算？ | Floored（跟 Python 一樣）(Recommended) |
 | 2 | Q6(c) 決策 2：modulo 除數為 0 時要怎麼處理？ | raise ValueError (Recommended) |
 | 3 | Q6(c) 決策 3：power(0, 0) 的結果是什麼？ | 回傳 1 (Recommended) |
