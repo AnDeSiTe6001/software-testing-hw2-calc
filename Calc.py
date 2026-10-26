@@ -82,3 +82,6 @@ class Calculator:
             raise ValueError("Cannot modulo by zero")
 
         return a % b
+
+    def power(self, a, b):
+        return a ** b
