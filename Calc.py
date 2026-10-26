@@ -70,5 +70,8 @@ class Calculator:
         except OverflowError:
             print("Overflow error: the result is too large.")
             return None
-        
+
         return c
+
+    def modulo(self, a, b):
+        return a % b
