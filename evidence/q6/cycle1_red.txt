@@ -1,0 +1,15 @@
+test_modulo (CalcTest.TestCalculator.test_modulo) ... ERROR
+
+======================================================================
+ERROR: test_modulo (CalcTest.TestCalculator.test_modulo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\CalcTest.py", line 69, in test_modulo
+    self.assertEqual(calc.modulo(7, 3), 1)  # Expect 7 % 3 = 1
+                     ^^^^^^^^^^^
+AttributeError: 'Calculator' object has no attribute 'modulo'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (errors=1)

@@ -1,0 +1,15 @@
+test_power_overflow (CalcTest.TestCalculator.test_power_overflow) ... FAIL
+
+======================================================================
+FAIL: test_power_overflow (CalcTest.TestCalculator.test_power_overflow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\CalcTest.py", line 129, in test_power_overflow
+    self.assertEqual(calc.power(2, 31), None)          # INT32_MAX + 1
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2147483648 != None
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

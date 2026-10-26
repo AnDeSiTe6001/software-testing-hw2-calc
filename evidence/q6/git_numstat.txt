@@ -1,0 +1,51 @@
+--- b9cc7d1 test(cycle 1): modulo basic results and floored sign rule for negative operands
+
+10	0	CalcTest.py
+--- 409b1b3 feat(cycle 1): add modulo using Python's floored % operator
+
+4	1	Calc.py
+--- 7665751 test(cycle 2): modulo by zero raises ValueError (int and float zero)
+
+8	0	CalcTest.py
+--- f2efb6e feat(cycle 2): modulo raises ValueError when the divisor is zero
+
+3	0	Calc.py
+--- 6b55792 test(cycle 3): modulo returns None for non-number input, checked before zero divisor
+
+9	0	CalcTest.py
+--- 2e3043c feat(cycle 3): modulo validates that both inputs are numbers
+
+4	0	Calc.py
+--- d8205d7 test(cycle 4): power basic results and power(0, 0) == 1
+
+9	0	CalcTest.py
+--- b831c69 feat(cycle 4): add power using Python's ** operator
+
+3	0	Calc.py
+--- 9bb80f2 test(cycle 5): negative exponent returns float; power(0, -1) raises ValueError
+
+12	0	CalcTest.py
+--- a404ff6 feat(cycle 5): power raises ValueError for zero to a negative power
+
+3	0	Calc.py
+--- e8ccfc1 test(cycle 6): power returns None for non-number input, checked before zero-base rule
+
+9	0	CalcTest.py
+--- e167a92 feat(cycle 6): power validates that both inputs are numbers
+
+4	0	Calc.py
+--- 43abd8a test(cycle 7): power returns None on int32 or float overflow
+
+12	0	CalcTest.py
+--- c20110a feat(cycle 7): power applies the int32/float overflow check used by the other operations
+
+11	1	Calc.py
+--- c77bf55 test(cycle 8): power raises ValueError when the result is not a real number
+
+11	0	CalcTest.py
+--- 9dfafdc feat(cycle 8): power raises ValueError instead of returning a complex number
+
+2	0	Calc.py
+--- dfc95c6 refactor: extract shared input validation and overflow check
+
+29	61	Calc.py

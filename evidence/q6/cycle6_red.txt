@@ -1,0 +1,18 @@
+test_power_invalid_input (CalcTest.TestCalculator.test_power_invalid_input) ... ERROR
+
+======================================================================
+ERROR: test_power_invalid_input (CalcTest.TestCalculator.test_power_invalid_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\CalcTest.py", line 118, in test_power_invalid_input
+    self.assertEqual(calc.power('2', 3), None)
+                     ~~~~~~~~~~^^^^^^^^
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Calc.py", line 90, in power
+    return a ** b
+           ~~^^~~
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)

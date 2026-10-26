@@ -1,0 +1,36 @@
+* dfc95c6 AnDeSiTe6001 2026-10-26 22:24:56
+|     refactor: extract shared input validation and overflow check
+* 9dfafdc AnDeSiTe6001 2026-10-26 22:24:26
+|     feat(cycle 8): power raises ValueError instead of returning a complex number
+* c77bf55 AnDeSiTe6001 2026-10-26 22:24:18
+|     test(cycle 8): power raises ValueError when the result is not a real number
+* c20110a AnDeSiTe6001 2026-10-26 22:19:41
+|     feat(cycle 7): power applies the int32/float overflow check used by the other operations
+* 43abd8a AnDeSiTe6001 2026-10-26 22:19:33
+|     test(cycle 7): power returns None on int32 or float overflow
+* e167a92 AnDeSiTe6001 2026-10-26 22:19:03
+|     feat(cycle 6): power validates that both inputs are numbers
+* e8ccfc1 AnDeSiTe6001 2026-10-26 22:18:56
+|     test(cycle 6): power returns None for non-number input, checked before zero-base rule
+* a404ff6 AnDeSiTe6001 2026-10-26 22:18:27
+|     feat(cycle 5): power raises ValueError for zero to a negative power
+* 9bb80f2 AnDeSiTe6001 2026-10-26 22:18:21
+|     test(cycle 5): negative exponent returns float; power(0, -1) raises ValueError
+* b831c69 AnDeSiTe6001 2026-10-26 22:17:40
+|     feat(cycle 4): add power using Python's ** operator
+* d8205d7 AnDeSiTe6001 2026-10-26 22:17:32
+|     test(cycle 4): power basic results and power(0, 0) == 1
+* 2e3043c AnDeSiTe6001 2026-10-26 22:17:12
+|     feat(cycle 3): modulo validates that both inputs are numbers
+* 6b55792 AnDeSiTe6001 2026-10-26 22:17:04
+|     test(cycle 3): modulo returns None for non-number input, checked before zero divisor
+* f2efb6e AnDeSiTe6001 2026-10-26 22:14:41
+|     feat(cycle 2): modulo raises ValueError when the divisor is zero
+* 7665751 AnDeSiTe6001 2026-10-26 22:14:33
+|     test(cycle 2): modulo by zero raises ValueError (int and float zero)
+* 409b1b3 AnDeSiTe6001 2026-10-26 22:11:55
+|     feat(cycle 1): add modulo using Python's floored % operator
+* b9cc7d1 AnDeSiTe6001 2026-10-26 22:11:42
+|     test(cycle 1): modulo basic results and floored sign rule for negative operands
+* 00bae58 AnDeSiTe6001 2026-10-26 21:58:01
+      Baseline: Calc and tests from Question 1 (add/subtract/multiply/divide), written by hand without AI

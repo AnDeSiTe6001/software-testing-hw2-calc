@@ -1,0 +1,18 @@
+test_modulo_by_zero (CalcTest.TestCalculator.test_modulo_by_zero) ... ERROR
+
+======================================================================
+ERROR: test_modulo_by_zero (CalcTest.TestCalculator.test_modulo_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\CalcTest.py", line 81, in test_modulo_by_zero
+    calc.modulo(7, 0)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Calc.py", line 77, in modulo
+    return a % b
+           ~~^~~
+ZeroDivisionError: integer modulo by zero
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)

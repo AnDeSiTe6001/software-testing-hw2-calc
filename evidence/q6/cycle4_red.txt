@@ -1,0 +1,15 @@
+test_power (CalcTest.TestCalculator.test_power) ... ERROR
+
+======================================================================
+ERROR: test_power (CalcTest.TestCalculator.test_power)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\CalcTest.py", line 96, in test_power
+    self.assertEqual(calc.power(2, 3), 8)  # Expect 2 ** 3 = 8
+                     ^^^^^^^^^^
+AttributeError: 'Calculator' object has no attribute 'power'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

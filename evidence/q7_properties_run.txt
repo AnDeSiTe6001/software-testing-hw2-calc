@@ -1,0 +1,110 @@
+test_add_equals_subtract_negation (Q7.test_properties.AgentCalcProperties.test_add_equals_subtract_negation) ... ok
+test_add_is_commutative (Q7.test_properties.AgentCalcProperties.test_add_is_commutative) ... ok
+test_divide_undoes_multiply (Q7.test_properties.AgentCalcProperties.test_divide_undoes_multiply) ... ok
+test_int_and_float_inputs_agree (Q7.test_properties.AgentCalcProperties.test_int_and_float_inputs_agree) ... ok
+test_multiply_distributes_over_add (Q7.test_properties.AgentCalcProperties.test_multiply_distributes_over_add) ... ok
+test_multiply_is_commutative (Q7.test_properties.AgentCalcProperties.test_multiply_is_commutative) ... ok
+test_number_minus_itself_is_zero (Q7.test_properties.AgentCalcProperties.test_number_minus_itself_is_zero) ... FAIL
+test_subtract_undoes_add (Q7.test_properties.AgentCalcProperties.test_subtract_undoes_add) ... ok
+test_subtract_undoes_add_for_floats (Q7.test_properties.AgentCalcProperties.test_subtract_undoes_add_for_floats) ... FAIL
+test_add_equals_subtract_negation (Q7.test_properties.Q1CalcProperties.test_add_equals_subtract_negation) ... ok
+test_add_is_commutative (Q7.test_properties.Q1CalcProperties.test_add_is_commutative) ... ok
+test_divide_undoes_multiply (Q7.test_properties.Q1CalcProperties.test_divide_undoes_multiply) ... ok
+test_int_and_float_inputs_agree (Q7.test_properties.Q1CalcProperties.test_int_and_float_inputs_agree) ... FAIL
+test_multiply_distributes_over_add (Q7.test_properties.Q1CalcProperties.test_multiply_distributes_over_add) ... ok
+test_multiply_is_commutative (Q7.test_properties.Q1CalcProperties.test_multiply_is_commutative) ... ok
+test_number_minus_itself_is_zero (Q7.test_properties.Q1CalcProperties.test_number_minus_itself_is_zero) ... ok
+test_subtract_undoes_add (Q7.test_properties.Q1CalcProperties.test_subtract_undoes_add) ... ok
+test_subtract_undoes_add_for_floats (Q7.test_properties.Q1CalcProperties.test_subtract_undoes_add_for_floats) ... FAIL
+
+======================================================================
+FAIL: test_number_minus_itself_is_zero (Q7.test_properties.AgentCalcProperties.test_number_minus_itself_is_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Q7\test_properties.py", line 104, in test_number_minus_itself_is_zero
+    @given(wide_ints)
+               ^^^^^^
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\.venv\Lib\site-packages\hypothesis\core.py", line 2299, in wrapped_test
+    raise the_error_hypothesis_found
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Q7\test_properties.py", line 107, in test_number_minus_itself_is_zero
+    self.assertEqual(self.calc.subtract(a, a), 0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 0
+Failing test case: test_number_minus_itself_is_zero(
+    self=<Q7.test_properties.AgentCalcProperties testMethod=test_number_minus_itself_is_zero>,
+    a=9_223_372_036_854_775_808,
+)
+Explanation:
+    These lines were always and only run by failing test cases:
+        C:\Users\josep\Documents\Software_Testing_2026\HW2\Q7\agent_calc\Calc.py:26
+
+======================================================================
+FAIL: test_subtract_undoes_add_for_floats (Q7.test_properties.AgentCalcProperties.test_subtract_undoes_add_for_floats)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Q7\test_properties.py", line 126, in test_subtract_undoes_add_for_floats
+    @given(finite_floats, finite_floats)
+               ^^^^^^^
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\.venv\Lib\site-packages\hypothesis\core.py", line 2299, in wrapped_test
+    raise the_error_hypothesis_found
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Q7\test_properties.py", line 131, in test_subtract_undoes_add_for_floats
+    self.assertTrue(math.isclose(back, a, rel_tol=1e-9, abs_tol=1e-9),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    f"subtract(add({a!r}, {b!r}), {b!r}) = {back!r}, expected about {a!r}")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : subtract(add(1.0, 9007199254740992.0), 9007199254740992.0) = 0.0, expected about 1.0
+Failing test case: test_subtract_undoes_add_for_floats(
+    self=<Q7.test_properties.AgentCalcProperties testMethod=test_subtract_undoes_add_for_floats>,
+    a=1.0,
+    b=9007199254740992.0,
+)
+
+======================================================================
+FAIL: test_int_and_float_inputs_agree (Q7.test_properties.Q1CalcProperties.test_int_and_float_inputs_agree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Q7\test_properties.py", line 112, in test_int_and_float_inputs_agree
+    @given(st.integers(-2**52, 2**52), st.integers(-2**52, 2**52))
+               ^^^^^^^
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\.venv\Lib\site-packages\hypothesis\core.py", line 2299, in wrapped_test
+    raise the_error_hypothesis_found
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Q7\test_properties.py", line 118, in test_int_and_float_inputs_agree
+    self.assertEqual(as_ints is None, as_floats is None,
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     f"add({a}, {b}) -> {as_ints!r} but add({float(a)}, {float(b)}) -> {as_floats!r}")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True != False : add(0, 2147483648) -> None but add(0.0, 2147483648.0) -> 2147483648.0
+Failing test case: test_int_and_float_inputs_agree(
+    self=<Q7.test_properties.Q1CalcProperties testMethod=test_int_and_float_inputs_agree>,
+    a=0,
+    b=2_147_483_648,
+)
+Explanation:
+    These lines were always and only run by failing test cases:
+        C:\Users\josep\Documents\Software_Testing_2026\HW2\Q7\q1_calc\Calc.py:17
+
+======================================================================
+FAIL: test_subtract_undoes_add_for_floats (Q7.test_properties.Q1CalcProperties.test_subtract_undoes_add_for_floats)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Q7\test_properties.py", line 126, in test_subtract_undoes_add_for_floats
+    @given(finite_floats, finite_floats)
+               ^^^^^^^
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\.venv\Lib\site-packages\hypothesis\core.py", line 2299, in wrapped_test
+    raise the_error_hypothesis_found
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Q7\test_properties.py", line 131, in test_subtract_undoes_add_for_floats
+    self.assertTrue(math.isclose(back, a, rel_tol=1e-9, abs_tol=1e-9),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    f"subtract(add({a!r}, {b!r}), {b!r}) = {back!r}, expected about {a!r}")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : subtract(add(1.0, 9007199254740992.0), 9007199254740992.0) = 0.0, expected about 1.0
+Failing test case: test_subtract_undoes_add_for_floats(
+    self=<Q7.test_properties.Q1CalcProperties testMethod=test_subtract_undoes_add_for_floats>,
+    a=1.0,
+    b=9007199254740992.0,
+)
+
+----------------------------------------------------------------------
+Ran 18 tests in 4.477s
+
+FAILED (failures=4)

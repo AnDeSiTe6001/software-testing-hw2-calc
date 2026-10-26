@@ -1,0 +1,18 @@
+test_power_negative_exponent (CalcTest.TestCalculator.test_power_negative_exponent) ... ERROR
+
+======================================================================
+ERROR: test_power_negative_exponent (CalcTest.TestCalculator.test_power_negative_exponent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\CalcTest.py", line 113, in test_power_negative_exponent
+    calc.power(0, -1)
+    ~~~~~~~~~~^^^^^^^
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Calc.py", line 87, in power
+    return a ** b
+           ~~^^~~
+ZeroDivisionError: 0.0 cannot be raised to a negative power
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)

@@ -1,0 +1,15 @@
+test_power_no_real_result (CalcTest.TestCalculator.test_power_no_real_result) ... FAIL
+
+======================================================================
+FAIL: test_power_no_real_result (CalcTest.TestCalculator.test_power_no_real_result)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\CalcTest.py", line 140, in test_power_no_real_result
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

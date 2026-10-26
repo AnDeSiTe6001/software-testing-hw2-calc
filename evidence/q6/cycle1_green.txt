@@ -1,0 +1,10 @@
+test_add (CalcTest.TestCalculator.test_add) ... ok
+test_divide (CalcTest.TestCalculator.test_divide) ... ok
+test_modulo (CalcTest.TestCalculator.test_modulo) ... ok
+test_multiply (CalcTest.TestCalculator.test_multiply) ... ok
+test_subtract (CalcTest.TestCalculator.test_subtract) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

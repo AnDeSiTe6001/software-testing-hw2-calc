@@ -1,0 +1,18 @@
+00bae58 2026-10-26 21:58:01 +0800 Baseline: Calc and tests from Question 1 (add/subtract/multiply/divide), written by hand without AI
+b9cc7d1 2026-10-26 22:11:42 +0800 test(cycle 1): modulo basic results and floored sign rule for negative operands
+409b1b3 2026-10-26 22:11:55 +0800 feat(cycle 1): add modulo using Python's floored % operator
+7665751 2026-10-26 22:14:33 +0800 test(cycle 2): modulo by zero raises ValueError (int and float zero)
+f2efb6e 2026-10-26 22:14:41 +0800 feat(cycle 2): modulo raises ValueError when the divisor is zero
+6b55792 2026-10-26 22:17:04 +0800 test(cycle 3): modulo returns None for non-number input, checked before zero divisor
+2e3043c 2026-10-26 22:17:12 +0800 feat(cycle 3): modulo validates that both inputs are numbers
+d8205d7 2026-10-26 22:17:32 +0800 test(cycle 4): power basic results and power(0, 0) == 1
+b831c69 2026-10-26 22:17:40 +0800 feat(cycle 4): add power using Python's ** operator
+9bb80f2 2026-10-26 22:18:21 +0800 test(cycle 5): negative exponent returns float; power(0, -1) raises ValueError
+a404ff6 2026-10-26 22:18:27 +0800 feat(cycle 5): power raises ValueError for zero to a negative power
+e8ccfc1 2026-10-26 22:18:56 +0800 test(cycle 6): power returns None for non-number input, checked before zero-base rule
+e167a92 2026-10-26 22:19:03 +0800 feat(cycle 6): power validates that both inputs are numbers
+43abd8a 2026-10-26 22:19:33 +0800 test(cycle 7): power returns None on int32 or float overflow
+c20110a 2026-10-26 22:19:41 +0800 feat(cycle 7): power applies the int32/float overflow check used by the other operations
+c77bf55 2026-10-26 22:24:18 +0800 test(cycle 8): power raises ValueError when the result is not a real number
+9dfafdc 2026-10-26 22:24:26 +0800 feat(cycle 8): power raises ValueError instead of returning a complex number
+dfc95c6 2026-10-26 22:24:56 +0800 refactor: extract shared input validation and overflow check

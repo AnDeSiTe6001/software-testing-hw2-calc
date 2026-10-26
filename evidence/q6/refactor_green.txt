@@ -1,0 +1,17 @@
+test_add (CalcTest.TestCalculator.test_add) ... ok
+test_divide (CalcTest.TestCalculator.test_divide) ... ok
+test_modulo (CalcTest.TestCalculator.test_modulo) ... ok
+test_modulo_by_zero (CalcTest.TestCalculator.test_modulo_by_zero) ... ok
+test_modulo_invalid_input (CalcTest.TestCalculator.test_modulo_invalid_input) ... ok
+test_multiply (CalcTest.TestCalculator.test_multiply) ... ok
+test_power (CalcTest.TestCalculator.test_power) ... ok
+test_power_invalid_input (CalcTest.TestCalculator.test_power_invalid_input) ... ok
+test_power_negative_exponent (CalcTest.TestCalculator.test_power_negative_exponent) ... ok
+test_power_no_real_result (CalcTest.TestCalculator.test_power_no_real_result) ... ok
+test_power_overflow (CalcTest.TestCalculator.test_power_overflow) ... ok
+test_subtract (CalcTest.TestCalculator.test_subtract) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.000s
+
+OK

@@ -1,0 +1,11 @@
+I have a Python unit test file for a calculator, but I don't have the implementation. Please write the implementation so that all tests pass.
+
+Working folder (use ONLY this folder; do not read, search, or list any other files or directories on this machine):
+C:/Users/josep/AppData/Local/Temp/claude/C--Users-josep-Documents-Software-Testing-2026-HW2/d27258f4-686c-4fcd-859c-756ca0e0bd54/scratchpad/q7_agent
+
+The test file is CalcTest.py in that folder. It imports `from Calc import Calculator`, so create Calc.py in the same folder. Do not modify CalcTest.py.
+
+Run the tests with this interpreter, from inside the working folder:
+C:/Users/josep/Documents/Software_Testing_2026/HW2/.venv/Scripts/python.exe -m unittest -v CalcTest
+
+When you are done, reply with: (1) the full final contents of Calc.py, (2) the full test output of your last run, and (3) a short explanation of the design decisions you made.

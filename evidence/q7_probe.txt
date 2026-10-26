@@ -1,0 +1,20 @@
+call                                                  agent Calc                my Q1 Calc                
+add(7, 8)                                             15                        15                        
+add(-5, 5)                                            0                         0                         
+subtract(100, 1)                                      99                        99                        
+subtract(-3, 9)                                       -12                       -12                       
+multiply(-3, 7)                                       -21                       -21                       
+multiply(0, 12345)                                    0                         0                         
+divide(7, 2)                                          3.5                       3.5                       
+divide(-9, 3)                                         -3.0                      -3.0                      
+add(0.1, 0.2)                                         0.30000000000000004       0.30000000000000004       
+add(2147483647, 1)                                    2147483648                None                        <-- differ
+add(4611686018427387904, 4611686018427387904)         None                      None                      
+add(4.611686018427388e+18, 4.611686018427388e+18)     9.223372036854776e+18     9.223372036854776e+18     
+subtract(9223372036854775808, 9223372036854775808)    None                      0                           <-- differ
+add(100000000000000000000, -100000000000000000000)    None                      0                           <-- differ
+divide(1, 0)                                          None                      raises ValueError           <-- differ
+divide(0, 0)                                          None                      raises ValueError           <-- differ
+add(True, 1)                                          None                      2                           <-- differ
+add(nan, 1)                                           None                      nan                         <-- differ
+add(inf, 1)                                           None                      None                      

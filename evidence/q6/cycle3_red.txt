@@ -1,0 +1,18 @@
+test_modulo_invalid_input (CalcTest.TestCalculator.test_modulo_invalid_input) ... ERROR
+
+======================================================================
+ERROR: test_modulo_invalid_input (CalcTest.TestCalculator.test_modulo_invalid_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\CalcTest.py", line 88, in test_modulo_invalid_input
+    self.assertEqual(calc.modulo('7', 3), None)
+                     ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\josep\Documents\Software_Testing_2026\HW2\Calc.py", line 80, in modulo
+    return a % b
+           ~~^~~
+TypeError: not all arguments converted during string formatting
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
