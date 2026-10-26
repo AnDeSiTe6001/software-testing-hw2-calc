@@ -84,6 +84,10 @@ class Calculator:
         return a % b
 
     def power(self, a, b):
+        if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+            print("Invalid input: both arguments must be numbers.")
+            return None
+
         if a == 0 and b < 0:
             raise ValueError("Cannot raise zero to a negative power")
 
