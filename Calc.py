@@ -58,7 +58,7 @@ class Calculator:
         if b == 0:
             raise ValueError("Cannot modulo by zero")
 
-        return a % b
+        return math.fmod(a, b)
 
     def power(self, a, b):
         if not self._valid_inputs(a, b):
