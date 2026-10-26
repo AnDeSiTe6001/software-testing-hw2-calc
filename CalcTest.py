@@ -121,6 +121,18 @@ class TestCalculator(unittest.TestCase):
         # Input type is checked before the zero-base rule
         self.assertEqual(calc.power(0, '-1'), None)
 
+    def test_power_overflow(self):
+        calc = Calculator()
+        # Same int32 result range as add/subtract/multiply
+        self.assertEqual(calc.power(2, 30), 1073741824)
+        self.assertEqual(calc.power(-2, 31), -2147483648)  # INT32_MIN still fits
+        self.assertEqual(calc.power(2, 31), None)          # INT32_MAX + 1
+        self.assertEqual(calc.power(10, 100), None)
+
+        # Float overflow returns None (Python raises OverflowError here)
+        self.assertEqual(calc.power(10.0, 400), None)
+        self.assertEqual(calc.power(1e308, 2), None)
+
 
 if __name__ == "__main__":
     unittest.main()
