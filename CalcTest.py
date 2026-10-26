@@ -64,6 +64,16 @@ class TestCalculator(unittest.TestCase):
         result = calc.divide(1e308, 1e-308)
         self.assertEqual(result, None)
 
+    def test_modulo(self):
+        calc = Calculator()
+        self.assertEqual(calc.modulo(7, 3), 1)  # Expect 7 % 3 = 1
+        self.assertEqual(calc.modulo(6, 3), 0)
+
+        # Decision (c): floored modulo, the result takes the sign of the divisor
+        self.assertEqual(calc.modulo(-7, 3), 2)
+        self.assertEqual(calc.modulo(7, -3), -2)
+        self.assertEqual(calc.modulo(-7, -3), -1)
+
 
 if __name__ == "__main__":
     unittest.main()
