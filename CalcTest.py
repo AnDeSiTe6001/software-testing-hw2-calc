@@ -112,6 +112,15 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             calc.power(0, -1)
 
+    def test_power_invalid_input(self):
+        calc = Calculator()
+        # Same as the other operations: non-numbers return None
+        self.assertEqual(calc.power('2', 3), None)
+        self.assertEqual(calc.power(2, '3'), None)
+        self.assertEqual(calc.power('2', '3'), None)
+        # Input type is checked before the zero-base rule
+        self.assertEqual(calc.power(0, '-1'), None)
+
 
 if __name__ == "__main__":
     unittest.main()
