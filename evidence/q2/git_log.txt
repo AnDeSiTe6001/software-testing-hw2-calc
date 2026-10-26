@@ -1,0 +1,15 @@
+22688a5 ci: run the Calc unit tests on GitHub Actions
+45c893f Change modulo implementation to math.fmod
+04b295a Revert "Change modulo implementation to math.fmod"
+64fe306 Change modulo implementation to math.fmod
+fe71518 fix: restore floored modulo (a % b) so CI passes
+1f53608 docs: Q2 evidence (CI logs, agent prompt and response)
+ce5f839 style: remove trailing whitespace in CalcTest.py found by ruff
+e45a9fc test: divide by zero raises ValueError
+b124f99 ci: add branch coverage (100% gate) and ruff static analysis
+2b10f2b ci: update actions to current major versions (Node 24)
+ff38359 Q3 demo: add an unused import (expect static analysis to fail)
+bcd4eb1 Revert "Q3 demo: add an unused import (expect static analysis to fail)"
+4ebc2da Q3 demo: add negate without a test (expect coverage gate to fail)
+2c808a8 Revert "Q3 demo: add negate without a test (expect coverage gate to fail)"
+e2020da ci: do not apply the coverage threshold to the HTML report step

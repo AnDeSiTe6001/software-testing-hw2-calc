@@ -1,0 +1,529 @@
+test	Set up job	﻿2026-10-26T15:18:50.0248675Z Current runner version: '2.338.0'
+test	Set up job	2026-10-26T15:18:50.0287616Z ##[group]Runner Image Provisioner
+test	Set up job	2026-10-26T15:18:50.0289139Z Hosted Compute Agent
+test	Set up job	2026-10-26T15:18:50.0290289Z Version: 20261021.618
+test	Set up job	2026-10-26T15:18:50.0291469Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+test	Set up job	2026-10-26T15:18:50.0292792Z Build Date: 2026-10-21T00:45:21Z
+test	Set up job	2026-10-26T15:18:50.0294385Z Worker ID: {992b3c63-83f3-42ca-bd69-ec4da332c8d1}
+test	Set up job	2026-10-26T15:18:50.0295662Z Region: westus
+test	Set up job	2026-10-26T15:18:50.0296761Z Cloud: Azure
+test	Set up job	2026-10-26T15:18:50.0297786Z ##[endgroup]
+test	Set up job	2026-10-26T15:18:50.0300289Z ##[group]Operating System
+test	Set up job	2026-10-26T15:18:50.0301549Z Ubuntu
+test	Set up job	2026-10-26T15:18:50.0302527Z 24.04.5
+test	Set up job	2026-10-26T15:18:50.0303398Z LTS
+test	Set up job	2026-10-26T15:18:50.0305022Z ##[endgroup]
+test	Set up job	2026-10-26T15:18:50.0306134Z ##[group]Runner Image
+test	Set up job	2026-10-26T15:18:50.0307221Z Image: ubuntu-24.04
+test	Set up job	2026-10-26T15:18:50.0308154Z Version: 20261012.334.1
+test	Set up job	2026-10-26T15:18:50.0310005Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+test	Set up job	2026-10-26T15:18:50.0313067Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+test	Set up job	2026-10-26T15:18:50.0315597Z ##[endgroup]
+test	Set up job	2026-10-26T15:18:50.0317762Z ##[group]GITHUB_TOKEN Permissions
+test	Set up job	2026-10-26T15:18:50.0321245Z Contents: read
+test	Set up job	2026-10-26T15:18:50.0322296Z Metadata: read
+test	Set up job	2026-10-26T15:18:50.0323356Z Packages: read
+test	Set up job	2026-10-26T15:18:50.0324935Z ##[endgroup]
+test	Set up job	2026-10-26T15:18:50.0327867Z Secret source: Actions
+test	Set up job	2026-10-26T15:18:50.0329599Z Cache mode: write
+test	Set up job	2026-10-26T15:18:50.0330751Z Prepare workflow directory
+test	Set up job	2026-10-26T15:18:50.1041929Z Prepare all required actions
+test	Set up job	2026-10-26T15:18:50.1116586Z Getting action download info
+test	Set up job	2026-10-26T15:18:50.5836217Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+test	Set up job	2026-10-26T15:18:50.6942838Z Download action repository 'actions/setup-python@v7' (SHA:6d4fd22b20465ccc0f7354476588e8df7c9ca0e0)
+test	Set up job	2026-10-26T15:18:51.1595208Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+test	Set up job	2026-10-26T15:18:51.7388399Z Complete job name: test
+test	Run actions/checkout@v7	﻿2026-10-26T15:18:51.8524883Z ##[group]Run actions/checkout@v7
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8526416Z with:
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8527470Z   repository: AnDeSiTe6001/software-testing-hw2-calc
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8536913Z   token: ***
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8537828Z   ssh-strict: true
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8538741Z   ssh-user: git
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8539692Z   persist-credentials: true
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8540726Z   clean: true
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8541674Z   sparse-checkout-cone-mode: true
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8542775Z   fetch-depth: 1
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8543701Z   fetch-tags: false
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8545018Z   show-progress: true
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8546001Z   lfs: false
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8546903Z   submodules: false
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8547864Z   set-safe-directory: true
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8548940Z   allow-unsafe-pr-checkout: false
+test	Run actions/checkout@v7	2026-10-26T15:18:51.8550381Z ##[endgroup]
+test	Run actions/checkout@v7	2026-10-26T15:18:51.9884107Z Syncing repository: AnDeSiTe6001/software-testing-hw2-calc
+test	Run actions/checkout@v7	2026-10-26T15:18:51.9888992Z ##[group]Getting Git version info
+test	Run actions/checkout@v7	2026-10-26T15:18:51.9892109Z Working directory is '/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc'
+test	Run actions/checkout@v7	2026-10-26T15:18:51.9896678Z [command]/usr/bin/git version
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0126078Z git version 2.55.0
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0131978Z ##[endgroup]
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0147971Z Temporarily overriding HOME='/home/runner/work/_temp/6a8a7361-49b0-4f82-8d2b-9f276d6460ef' before making global git config changes
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0153132Z Adding repository directory to the temporary git global config as a safe directory
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0160448Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0167979Z Deleting the contents of '/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc'
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0172694Z ##[group]Determining repository object format
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0177116Z ##[endgroup]
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0179854Z ##[group]Initializing the repository
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0183175Z [command]/usr/bin/git init /home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0368854Z hint: Using 'master' as the name for the initial branch. This default branch name
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0375336Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0379260Z hint: to use in all of your new repositories, which will suppress this warning,
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0382289Z hint: call:
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0384260Z hint:
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0395482Z hint: 	git config --global init.defaultBranch <name>
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0410675Z hint:
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0413074Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0418688Z hint: 'development'. The just-created branch can be renamed via this command:
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0422384Z hint:
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0426290Z hint: 	git branch -m <name>
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0429168Z hint:
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0436939Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0448008Z Initialized empty Git repository in /home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git/
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0457022Z [command]/usr/bin/git remote add origin https://github.com/AnDeSiTe6001/software-testing-hw2-calc
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0464997Z ##[endgroup]
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0467871Z ##[group]Disabling automatic garbage collection
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0470340Z [command]/usr/bin/git config --local gc.auto 0
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0547594Z ##[endgroup]
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0562762Z ##[group]Setting up auth
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0574909Z Removing SSH command configuration
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0578018Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Run actions/checkout@v7	2026-10-26T15:18:52.0617535Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Run actions/checkout@v7	2026-10-26T15:18:52.1135056Z Removing HTTP extra header
+test	Run actions/checkout@v7	2026-10-26T15:18:52.1139656Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Run actions/checkout@v7	2026-10-26T15:18:52.1197716Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Run actions/checkout@v7	2026-10-26T15:18:52.1605795Z Removing includeIf entries pointing to credentials config files
+test	Run actions/checkout@v7	2026-10-26T15:18:52.1626214Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Run actions/checkout@v7	2026-10-26T15:18:52.1677006Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Run actions/checkout@v7	2026-10-26T15:18:52.1988918Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-b761b43f-34f3-47fa-89e4-2ecd00a69627.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test	Run actions/checkout@v7	2026-10-26T15:18:52.2047501Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git.path /home/runner/work/_temp/git-credentials-b761b43f-34f3-47fa-89e4-2ecd00a69627.config
+test	Run actions/checkout@v7	2026-10-26T15:18:52.2082846Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-b761b43f-34f3-47fa-89e4-2ecd00a69627.config
+test	Run actions/checkout@v7	2026-10-26T15:18:52.2128469Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-b761b43f-34f3-47fa-89e4-2ecd00a69627.config
+test	Run actions/checkout@v7	2026-10-26T15:18:52.2170059Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-b761b43f-34f3-47fa-89e4-2ecd00a69627.config
+test	Run actions/checkout@v7	2026-10-26T15:18:52.2212544Z ##[endgroup]
+test	Run actions/checkout@v7	2026-10-26T15:18:52.2216605Z ##[group]Fetching the repository
+test	Run actions/checkout@v7	2026-10-26T15:18:52.2222137Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e2020da7c836249a48db2274e81db83919bcd2a9:refs/remotes/origin/main
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6351420Z From https://github.com/AnDeSiTe6001/software-testing-hw2-calc
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6355296Z  * [new ref]         e2020da7c836249a48db2274e81db83919bcd2a9 -> origin/main
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6359355Z [command]/usr/bin/git branch --list --remote origin/main
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6360658Z   origin/main
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6372062Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6402400Z e2020da7c836249a48db2274e81db83919bcd2a9
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6408597Z ##[endgroup]
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6410232Z ##[group]Determining the checkout info
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6412407Z ##[endgroup]
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6416632Z [command]/usr/bin/git sparse-checkout disable
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6472946Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6525289Z ##[group]Checking out the ref
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6536904Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6618768Z Switched to a new branch 'main'
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6626180Z branch 'main' set up to track 'origin/main'.
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6638316Z ##[endgroup]
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6679347Z [command]/usr/bin/git log -1 --format=%H
+test	Run actions/checkout@v7	2026-10-26T15:18:52.6712067Z e2020da7c836249a48db2274e81db83919bcd2a9
+test	Run actions/setup-python@v7	﻿2026-10-26T15:18:52.7026184Z ##[group]Run actions/setup-python@v7
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7092822Z with:
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7093451Z   python-version: 3.13
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7094206Z   cache: pip
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7094805Z   cache-dependency-path: requirements-dev.txt
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7095512Z   check-latest: false
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7098762Z   token: ***
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7099195Z   mirror: https://raw.githubusercontent.com/actions/python-versions/main
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7099674Z   update-environment: true
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7099972Z   allow-prereleases: false
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7100260Z   freethreaded: false
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.7100524Z ##[endgroup]
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.8375999Z ##[group]Installed versions
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.8399209Z Successfully set up CPython (3.13.16)
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.8400703Z ##[endgroup]
+test	Run actions/setup-python@v7	2026-10-26T15:18:52.8837805Z [command]/opt/hostedtoolcache/Python/3.13.16/x64/bin/pip cache dir
+test	Run actions/setup-python@v7	2026-10-26T15:18:54.9686858Z /home/runner/.cache/pip
+test	Run actions/setup-python@v7	2026-10-26T15:18:55.2390348Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.16-pip-aeea8ff85e13f4f7b413c72d8e9e68f948ad823f5cbb618a96425768dfe06be0
+test	Run actions/setup-python@v7	2026-10-26T15:18:56.5416900Z Received 3623 of 12586535 (0.0%), 0.0 MBs/sec
+test	Run actions/setup-python@v7	2026-10-26T15:18:56.9610200Z Received 12586535 of 12586535 (100.0%), 8.5 MBs/sec
+test	Run actions/setup-python@v7	2026-10-26T15:18:56.9611493Z Cache Size: ~12 MB (12586535 B)
+test	Run actions/setup-python@v7	2026-10-26T15:18:56.9647920Z [command]/usr/bin/tar -xf /home/runner/work/_temp/648ebcb1-cace-4967-987b-7a958760c97a/cache.tzst -P -C /home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc --use-compress-program unzstd
+test	Run actions/setup-python@v7	2026-10-26T15:18:56.9967219Z Cache restored successfully
+test	Run actions/setup-python@v7	2026-10-26T15:18:57.0066947Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.16-pip-aeea8ff85e13f4f7b413c72d8e9e68f948ad823f5cbb618a96425768dfe06be0
+test	Install tools	﻿2026-10-26T15:18:57.0188713Z ##[group]Run pip install -r requirements-dev.txt
+test	Install tools	2026-10-26T15:18:57.0189202Z [36;1mpip install -r requirements-dev.txt[0m
+test	Install tools	2026-10-26T15:18:57.0447589Z shell: /usr/bin/bash -e {0}
+test	Install tools	2026-10-26T15:18:57.0447904Z env:
+test	Install tools	2026-10-26T15:18:57.0448192Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Install tools	2026-10-26T15:18:57.0448691Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+test	Install tools	2026-10-26T15:18:57.0449156Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Install tools	2026-10-26T15:18:57.0449579Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Install tools	2026-10-26T15:18:57.0449975Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Install tools	2026-10-26T15:18:57.0450599Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+test	Install tools	2026-10-26T15:18:57.0450942Z ##[endgroup]
+test	Install tools	2026-10-26T15:18:58.6486115Z Collecting coverage==7.17.0 (from -r requirements-dev.txt (line 1))
+test	Install tools	2026-10-26T15:18:58.6503259Z   Using cached coverage-7.17.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.1 kB)
+test	Install tools	2026-10-26T15:18:58.9567429Z Collecting ruff==0.17.2 (from -r requirements-dev.txt (line 2))
+test	Install tools	2026-10-26T15:18:58.9582463Z   Using cached ruff-0.17.2-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+test	Install tools	2026-10-26T15:18:58.9628113Z Using cached coverage-7.17.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (260 kB)
+test	Install tools	2026-10-26T15:18:58.9655149Z Using cached ruff-0.17.2-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.5 MB)
+test	Install tools	2026-10-26T15:18:59.1228984Z Installing collected packages: ruff, coverage
+test	Install tools	2026-10-26T15:18:59.3615329Z 
+test	Install tools	2026-10-26T15:18:59.3628950Z Successfully installed coverage-7.17.0 ruff-0.17.2
+test	Install tools	2026-10-26T15:18:59.3642240Z 
+test	Install tools	2026-10-26T15:18:59.3645348Z [notice] A new release of pip is available: 26.2.1 -> 26.2.2
+test	Install tools	2026-10-26T15:18:59.3664810Z [notice] To update, run: pip install --upgrade pip
+test	Run unit tests with branch coverage	﻿2026-10-26T15:18:59.4450020Z ##[group]Run coverage run -m unittest -v CalcTest
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.4450464Z [36;1mcoverage run -m unittest -v CalcTest[0m
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.4516627Z shell: /usr/bin/bash -e {0}
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.4517037Z env:
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.4517473Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.4518233Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.4518977Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.4519631Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.4520286Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.4520962Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.4521437Z ##[endgroup]
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9804450Z test_add (CalcTest.TestCalculator.test_add) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9805667Z test_divide (CalcTest.TestCalculator.test_divide) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9807706Z test_divide_by_zero (CalcTest.TestCalculator.test_divide_by_zero) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9814182Z test_modulo (CalcTest.TestCalculator.test_modulo) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9820354Z test_modulo_by_zero (CalcTest.TestCalculator.test_modulo_by_zero) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9821595Z test_modulo_invalid_input (CalcTest.TestCalculator.test_modulo_invalid_input) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9830943Z test_multiply (CalcTest.TestCalculator.test_multiply) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9831998Z test_power (CalcTest.TestCalculator.test_power) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9833070Z test_power_invalid_input (CalcTest.TestCalculator.test_power_invalid_input) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9834705Z test_power_negative_exponent (CalcTest.TestCalculator.test_power_negative_exponent) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9836152Z test_power_no_real_result (CalcTest.TestCalculator.test_power_no_real_result) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9837431Z test_power_overflow (CalcTest.TestCalculator.test_power_overflow) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9838682Z test_subtract (CalcTest.TestCalculator.test_subtract) ... ok
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9839420Z 
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9839922Z ----------------------------------------------------------------------
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9840918Z Ran 13 tests in 0.002s
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9841497Z 
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9847816Z OK
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9860094Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9860855Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9861590Z Overflow error: the result is too large.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9862289Z Overflow error: the result is too large.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9863007Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9863736Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9881120Z Overflow error: the result is too large.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9882268Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9889715Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9890557Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9891343Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9892197Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9892996Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9896221Z Overflow error: the result is too large.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9896980Z Overflow error: the result is too large.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9897769Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9898560Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9899421Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9900223Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9914440Z Overflow error: the result is too large.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9915258Z Overflow error: the result is too large.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9916003Z Overflow error: the result is too large.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9916720Z Overflow error: the result is too large.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9917477Z Invalid input: both arguments must be numbers.
+test	Run unit tests with branch coverage	2026-10-26T15:18:59.9918603Z Invalid input: both arguments must be numbers.
+test	Coverage report (fails below 100%)	﻿2026-10-26T15:19:00.0077356Z ##[group]Run # Write the table to the job summary first; the plain report below enforces fail_under
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0078097Z [36;1m# Write the table to the job summary first; the plain report below enforces fail_under[0m
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0078670Z [36;1mcoverage report --format=markdown >> "$GITHUB_STEP_SUMMARY" || true[0m
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0079068Z [36;1mcoverage report[0m
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0156994Z shell: /usr/bin/bash -e {0}
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0157430Z env:
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0157888Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0158645Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0159398Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0160058Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0160719Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0161381Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.0161990Z ##[endgroup]
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.5385177Z Name      Stmts   Miss Branch BrPart  Cover   Missing
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.5386012Z -----------------------------------------------------
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.5386751Z Calc.py      54      0     26      0   100%
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.5387443Z -----------------------------------------------------
+test	Coverage report (fails below 100%)	2026-10-26T15:19:00.5388091Z TOTAL        54      0     26      0   100%
+test	Coverage HTML report	﻿2026-10-26T15:19:00.8370432Z ##[group]Run coverage html --fail-under=0
+test	Coverage HTML report	2026-10-26T15:19:00.8371023Z [36;1mcoverage html --fail-under=0[0m
+test	Coverage HTML report	2026-10-26T15:19:00.8435292Z shell: /usr/bin/bash -e {0}
+test	Coverage HTML report	2026-10-26T15:19:00.8435588Z env:
+test	Coverage HTML report	2026-10-26T15:19:00.8435865Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Coverage HTML report	2026-10-26T15:19:00.8436316Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+test	Coverage HTML report	2026-10-26T15:19:00.8436759Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Coverage HTML report	2026-10-26T15:19:00.8437169Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Coverage HTML report	2026-10-26T15:19:00.8437560Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Coverage HTML report	2026-10-26T15:19:00.8437949Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+test	Coverage HTML report	2026-10-26T15:19:00.8438280Z ##[endgroup]
+test	Coverage HTML report	2026-10-26T15:19:01.0372728Z Wrote HTML report to htmlcov/index.html
+test	Run actions/upload-artifact@v7	﻿2026-10-26T15:19:01.0822117Z ##[group]Run actions/upload-artifact@v7
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0822629Z with:
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0822946Z   name: coverage-html
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0823309Z   path: htmlcov/
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0823659Z   if-no-files-found: warn
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0824403Z   compression-level: 6
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0824781Z   overwrite: false
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0825356Z   include-hidden-files: false
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0825751Z   archive: true
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0826063Z env:
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0826554Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0827272Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0827983Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0828618Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0829263Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0829919Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.0830501Z ##[endgroup]
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.2946278Z With the provided path, there will be 9 files uploaded
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.2970038Z Artifact name is valid!
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.2970774Z Root directory input is valid!
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.6905378Z Uploading artifact: coverage-html.zip
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:01.6947505Z Beginning upload of artifact content to blob storage
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:02.1092763Z Uploaded bytes 26948
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:02.1851742Z Finished uploading artifact content to blob storage!
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:02.1853402Z SHA256 digest of uploaded artifact is af41e8e6096c683784db9cb2da59b2abb220dafeea16fbf9c02eea2126c44a17
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:02.1857353Z Finalizing artifact upload
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:02.8771959Z Artifact coverage-html successfully finalized. Artifact ID 12662092191
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:02.8773547Z Artifact coverage-html has been successfully uploaded! Final size is 26948 bytes. Artifact ID is 12662092191
+test	Run actions/upload-artifact@v7	2026-10-26T15:19:02.8785214Z Artifact download URL: https://github.com/AnDeSiTe6001/software-testing-hw2-calc/actions/runs/40348070521/artifacts/12662092191
+test	Post Run actions/setup-python@v7	﻿2026-10-26T15:19:02.8956888Z Post job cleanup.
+test	Post Run actions/setup-python@v7	2026-10-26T15:19:03.0169576Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.13.16-pip-aeea8ff85e13f4f7b413c72d8e9e68f948ad823f5cbb618a96425768dfe06be0, not saving cache.
+test	Post Run actions/checkout@v7	﻿2026-10-26T15:19:03.0298821Z Post job cleanup.
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.1588162Z [command]/usr/bin/git version
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.1735107Z git version 2.55.0
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.1849622Z Temporarily overriding HOME='/home/runner/work/_temp/66300389-e66b-436f-a1b5-445d5d25f4bd' before making global git config changes
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.1851639Z Adding repository directory to the temporary git global config as a safe directory
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.1886530Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.1994862Z Removing SSH command configuration
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.1999951Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.2108814Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.2676908Z Removing HTTP extra header
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.2698978Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.2765739Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3115643Z Removing includeIf entries pointing to credentials config files
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3127883Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3185142Z includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git.path
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3187052Z includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git/worktrees/*.path
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3204560Z includeif.gitdir:/github/workspace/.git.path
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3234755Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3246007Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git.path
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3265113Z /home/runner/work/_temp/git-credentials-b761b43f-34f3-47fa-89e4-2ecd00a69627.config
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3306597Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-b761b43f\-34f3\-47fa\-89e4\-2ecd00a69627\.config
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3325453Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git/worktrees/*.path
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3374859Z /home/runner/work/_temp/git-credentials-b761b43f-34f3-47fa-89e4-2ecd00a69627.config
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3386887Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-b761b43f\-34f3\-47fa\-89e4\-2ecd00a69627\.config
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3440541Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3474412Z /github/runner_temp/git-credentials-b761b43f-34f3-47fa-89e4-2ecd00a69627.config
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3484438Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-b761b43f\-34f3\-47fa\-89e4\-2ecd00a69627\.config
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3526378Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3558234Z /github/runner_temp/git-credentials-b761b43f-34f3-47fa-89e4-2ecd00a69627.config
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3567308Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-b761b43f\-34f3\-47fa\-89e4\-2ecd00a69627\.config
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3610781Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Post Run actions/checkout@v7	2026-10-26T15:19:03.3864134Z Removing credentials config '/home/runner/work/_temp/git-credentials-b761b43f-34f3-47fa-89e4-2ecd00a69627.config'
+test	Complete job	﻿2026-10-26T15:19:03.4016202Z Cleaning up orphan processes
+static-analysis	Set up job	﻿2026-10-26T15:18:50.4826369Z Current runner version: '2.338.0'
+static-analysis	Set up job	2026-10-26T15:18:50.4867866Z ##[group]Runner Image Provisioner
+static-analysis	Set up job	2026-10-26T15:18:50.4869604Z Hosted Compute Agent
+static-analysis	Set up job	2026-10-26T15:18:50.4870647Z Version: 20261021.618
+static-analysis	Set up job	2026-10-26T15:18:50.4871833Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+static-analysis	Set up job	2026-10-26T15:18:50.4873136Z Build Date: 2026-10-21T00:45:21Z
+static-analysis	Set up job	2026-10-26T15:18:50.4874747Z Worker ID: {c05744d6-2ecc-4db4-afe1-bc2b642681ec}
+static-analysis	Set up job	2026-10-26T15:18:50.4877079Z Region: westus
+static-analysis	Set up job	2026-10-26T15:18:50.4878222Z Cloud: Azure
+static-analysis	Set up job	2026-10-26T15:18:50.4879164Z ##[endgroup]
+static-analysis	Set up job	2026-10-26T15:18:50.4882139Z ##[group]Operating System
+static-analysis	Set up job	2026-10-26T15:18:50.4883305Z Ubuntu
+static-analysis	Set up job	2026-10-26T15:18:50.4884716Z 24.04.5
+static-analysis	Set up job	2026-10-26T15:18:50.4885696Z LTS
+static-analysis	Set up job	2026-10-26T15:18:50.4886599Z ##[endgroup]
+static-analysis	Set up job	2026-10-26T15:18:50.4887725Z ##[group]Runner Image
+static-analysis	Set up job	2026-10-26T15:18:50.4888803Z Image: ubuntu-24.04
+static-analysis	Set up job	2026-10-26T15:18:50.4889922Z Version: 20261012.334.1
+static-analysis	Set up job	2026-10-26T15:18:50.4891888Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+static-analysis	Set up job	2026-10-26T15:18:50.4895777Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+static-analysis	Set up job	2026-10-26T15:18:50.4897616Z ##[endgroup]
+static-analysis	Set up job	2026-10-26T15:18:50.4899922Z ##[group]GITHUB_TOKEN Permissions
+static-analysis	Set up job	2026-10-26T15:18:50.4903628Z Contents: read
+static-analysis	Set up job	2026-10-26T15:18:50.4905558Z Metadata: read
+static-analysis	Set up job	2026-10-26T15:18:50.4906621Z Packages: read
+static-analysis	Set up job	2026-10-26T15:18:50.4907613Z ##[endgroup]
+static-analysis	Set up job	2026-10-26T15:18:50.4911316Z Secret source: Actions
+static-analysis	Set up job	2026-10-26T15:18:50.4912965Z Cache mode: write
+static-analysis	Set up job	2026-10-26T15:18:50.4915452Z Prepare workflow directory
+static-analysis	Set up job	2026-10-26T15:18:50.5587699Z Prepare all required actions
+static-analysis	Set up job	2026-10-26T15:18:50.5665581Z Getting action download info
+static-analysis	Set up job	2026-10-26T15:18:50.9984558Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+static-analysis	Set up job	2026-10-26T15:18:51.1370582Z Download action repository 'actions/setup-python@v7' (SHA:6d4fd22b20465ccc0f7354476588e8df7c9ca0e0)
+static-analysis	Set up job	2026-10-26T15:18:51.7311263Z Complete job name: static-analysis
+static-analysis	Run actions/checkout@v7	﻿2026-10-26T15:18:51.8271966Z ##[group]Run actions/checkout@v7
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8273002Z with:
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8273642Z   repository: AnDeSiTe6001/software-testing-hw2-calc
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8278690Z   token: ***
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8279204Z   ssh-strict: true
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8279717Z   ssh-user: git
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8280221Z   persist-credentials: true
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8280769Z   clean: true
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8281271Z   sparse-checkout-cone-mode: true
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8281861Z   fetch-depth: 1
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8282351Z   fetch-tags: false
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8282845Z   show-progress: true
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8283341Z   lfs: false
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8283809Z   submodules: false
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8284489Z   set-safe-directory: true
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8285067Z   allow-unsafe-pr-checkout: false
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.8285966Z ##[endgroup]
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9640269Z Syncing repository: AnDeSiTe6001/software-testing-hw2-calc
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9644942Z ##[group]Getting Git version info
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9647555Z Working directory is '/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc'
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9650401Z [command]/usr/bin/git version
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9651561Z git version 2.55.0
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9681995Z ##[endgroup]
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9700940Z Temporarily overriding HOME='/home/runner/work/_temp/c9b8f5ce-21e7-4984-820c-7b9f52fd3bf2' before making global git config changes
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9722246Z Adding repository directory to the temporary git global config as a safe directory
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9725644Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9842206Z Deleting the contents of '/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc'
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9845776Z ##[group]Determining repository object format
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9855917Z ##[endgroup]
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9858988Z ##[group]Initializing the repository
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:51.9861596Z [command]/usr/bin/git init /home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0021944Z hint: Using 'master' as the name for the initial branch. This default branch name
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0047407Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0063796Z hint: to use in all of your new repositories, which will suppress this warning,
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0066366Z hint: call:
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0067446Z hint:
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0068831Z hint: 	git config --global init.defaultBranch <name>
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0070327Z hint:
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0071635Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0073712Z hint: 'development'. The just-created branch can be renamed via this command:
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0076094Z hint:
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0077151Z hint: 	git branch -m <name>
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0078259Z hint:
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0079810Z hint: Disable this message with "git config set advice.defaultBranchName false"
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0082715Z Initialized empty Git repository in /home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git/
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0087816Z [command]/usr/bin/git remote add origin https://github.com/AnDeSiTe6001/software-testing-hw2-calc
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0166236Z ##[endgroup]
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0168526Z ##[group]Disabling automatic garbage collection
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0185617Z [command]/usr/bin/git config --local gc.auto 0
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0236474Z ##[endgroup]
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0238946Z ##[group]Setting up auth
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0255472Z Removing SSH command configuration
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0276012Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0308658Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0867367Z Removing HTTP extra header
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0870221Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.0899539Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1147588Z Removing includeIf entries pointing to credentials config files
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1150928Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1195057Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1660986Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-b3c0da36-f855-4620-a4c4-024c559e91dd.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1666052Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git.path /home/runner/work/_temp/git-credentials-b3c0da36-f855-4620-a4c4-024c559e91dd.config
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1672341Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-b3c0da36-f855-4620-a4c4-024c559e91dd.config
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1682386Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-b3c0da36-f855-4620-a4c4-024c559e91dd.config
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1724890Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-b3c0da36-f855-4620-a4c4-024c559e91dd.config
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1775051Z ##[endgroup]
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1777379Z ##[group]Fetching the repository
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.1782433Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e2020da7c836249a48db2274e81db83919bcd2a9:refs/remotes/origin/main
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6678301Z From https://github.com/AnDeSiTe6001/software-testing-hw2-calc
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6854961Z  * [new ref]         e2020da7c836249a48db2274e81db83919bcd2a9 -> origin/main
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6863922Z [command]/usr/bin/git branch --list --remote origin/main
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6866547Z   origin/main
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6871868Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6874650Z e2020da7c836249a48db2274e81db83919bcd2a9
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6880947Z ##[endgroup]
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6883724Z ##[group]Determining the checkout info
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6887603Z ##[endgroup]
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6889731Z [command]/usr/bin/git sparse-checkout disable
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6897338Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6920138Z ##[group]Checking out the ref
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.6927213Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.7032546Z Switched to a new branch 'main'
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.7047038Z branch 'main' set up to track 'origin/main'.
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.7056259Z ##[endgroup]
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.7105196Z [command]/usr/bin/git log -1 --format=%H
+static-analysis	Run actions/checkout@v7	2026-10-26T15:18:52.7141512Z e2020da7c836249a48db2274e81db83919bcd2a9
+static-analysis	Run actions/setup-python@v7	﻿2026-10-26T15:18:52.7602638Z ##[group]Run actions/setup-python@v7
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7603948Z with:
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7605041Z   python-version: 3.13
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7606122Z   cache: pip
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7607178Z   cache-dependency-path: requirements-dev.txt
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7608537Z   check-latest: false
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7619532Z   token: ***
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7620952Z   mirror: https://raw.githubusercontent.com/actions/python-versions/main
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7622695Z   update-environment: true
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7624046Z   allow-prereleases: false
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7625298Z   freethreaded: false
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.7626292Z ##[endgroup]
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.8961498Z ##[group]Installed versions
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.9029740Z Successfully set up CPython (3.13.16)
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.9033407Z ##[endgroup]
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:52.9616740Z [command]/opt/hostedtoolcache/Python/3.13.16/x64/bin/pip cache dir
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:53.3235220Z /home/runner/.cache/pip
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:53.6158633Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.16-pip-aeea8ff85e13f4f7b413c72d8e9e68f948ad823f5cbb618a96425768dfe06be0
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:54.9147905Z Received 3623 of 12586535 (0.0%), 0.0 MBs/sec
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:55.2511244Z Received 12586535 of 12586535 (100.0%), 9.0 MBs/sec
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:55.2527188Z Cache Size: ~12 MB (12586535 B)
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:55.2559208Z [command]/usr/bin/tar -xf /home/runner/work/_temp/6676606d-d61d-40b6-adec-3e6c40ed2431/cache.tzst -P -C /home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc --use-compress-program unzstd
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:55.2895017Z Cache restored successfully
+static-analysis	Run actions/setup-python@v7	2026-10-26T15:18:55.2925957Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.16-pip-aeea8ff85e13f4f7b413c72d8e9e68f948ad823f5cbb618a96425768dfe06be0
+static-analysis	Install tools	﻿2026-10-26T15:18:55.3088926Z ##[group]Run pip install -r requirements-dev.txt
+static-analysis	Install tools	2026-10-26T15:18:55.3089418Z [36;1mpip install -r requirements-dev.txt[0m
+static-analysis	Install tools	2026-10-26T15:18:55.3336654Z shell: /usr/bin/bash -e {0}
+static-analysis	Install tools	2026-10-26T15:18:55.3337118Z env:
+static-analysis	Install tools	2026-10-26T15:18:55.3337541Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Install tools	2026-10-26T15:18:55.3338218Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+static-analysis	Install tools	2026-10-26T15:18:55.3338873Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Install tools	2026-10-26T15:18:55.3339447Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Install tools	2026-10-26T15:18:55.3340016Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Install tools	2026-10-26T15:18:55.3340629Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+static-analysis	Install tools	2026-10-26T15:18:55.3341415Z ##[endgroup]
+static-analysis	Install tools	2026-10-26T15:18:56.3799160Z Collecting coverage==7.17.0 (from -r requirements-dev.txt (line 1))
+static-analysis	Install tools	2026-10-26T15:18:56.3818248Z   Using cached coverage-7.17.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.1 kB)
+static-analysis	Install tools	2026-10-26T15:18:56.7005460Z Collecting ruff==0.17.2 (from -r requirements-dev.txt (line 2))
+static-analysis	Install tools	2026-10-26T15:18:56.7022173Z   Using cached ruff-0.17.2-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+static-analysis	Install tools	2026-10-26T15:18:56.7070650Z Using cached coverage-7.17.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (260 kB)
+static-analysis	Install tools	2026-10-26T15:18:56.7089184Z Using cached ruff-0.17.2-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.5 MB)
+static-analysis	Install tools	2026-10-26T15:18:56.7600371Z Installing collected packages: ruff, coverage
+static-analysis	Install tools	2026-10-26T15:18:57.0064990Z 
+static-analysis	Install tools	2026-10-26T15:18:57.0075420Z Successfully installed coverage-7.17.0 ruff-0.17.2
+static-analysis	Install tools	2026-10-26T15:18:57.0076954Z 
+static-analysis	Install tools	2026-10-26T15:18:57.0077715Z [notice] A new release of pip is available: 26.2.1 -> 26.2.2
+static-analysis	Install tools	2026-10-26T15:18:57.0078775Z [notice] To update, run: pip install --upgrade pip
+static-analysis	Ruff lint	﻿2026-10-26T15:18:57.0847377Z ##[group]Run ruff check --output-format=github .
+static-analysis	Ruff lint	2026-10-26T15:18:57.0847859Z [36;1mruff check --output-format=github .[0m
+static-analysis	Ruff lint	2026-10-26T15:18:57.0910840Z shell: /usr/bin/bash -e {0}
+static-analysis	Ruff lint	2026-10-26T15:18:57.0911181Z env:
+static-analysis	Ruff lint	2026-10-26T15:18:57.0911506Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Ruff lint	2026-10-26T15:18:57.0912053Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+static-analysis	Ruff lint	2026-10-26T15:18:57.0912591Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Ruff lint	2026-10-26T15:18:57.0913065Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Ruff lint	2026-10-26T15:18:57.0913542Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Ruff lint	2026-10-26T15:18:57.0914036Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+static-analysis	Ruff lint	2026-10-26T15:18:57.0914849Z ##[endgroup]
+static-analysis	Post Run actions/setup-python@v7	﻿2026-10-26T15:18:57.1181318Z Post job cleanup.
+static-analysis	Post Run actions/setup-python@v7	2026-10-26T15:18:57.2409362Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.13.16-pip-aeea8ff85e13f4f7b413c72d8e9e68f948ad823f5cbb618a96425768dfe06be0, not saving cache.
+static-analysis	Post Run actions/checkout@v7	﻿2026-10-26T15:18:57.2564841Z Post job cleanup.
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.3535204Z [command]/usr/bin/git version
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.3600938Z git version 2.55.0
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.3685698Z Temporarily overriding HOME='/home/runner/work/_temp/3dbf77dd-a77e-4cd0-8daf-898f24c595e5' before making global git config changes
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.3687489Z Adding repository directory to the temporary git global config as a safe directory
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.3709008Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.3775708Z Removing SSH command configuration
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.3776717Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.3866355Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4257406Z Removing HTTP extra header
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4265875Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4348395Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4695322Z Removing includeIf entries pointing to credentials config files
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4696526Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4755172Z includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git.path
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4756934Z includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git/worktrees/*.path
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4774901Z includeif.gitdir:/github/workspace/.git.path
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4776306Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4845685Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git.path
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4854149Z /home/runner/work/_temp/git-credentials-b3c0da36-f855-4620-a4c4-024c559e91dd.config
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4859051Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-b3c0da36\-f855\-4620\-a4c4\-024c559e91dd\.config
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4872801Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git/worktrees/*.path
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4906998Z /home/runner/work/_temp/git-credentials-b3c0da36-f855-4620-a4c4-024c559e91dd.config
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4917554Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-testing-hw2-calc/software-testing-hw2-calc/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-b3c0da36\-f855\-4620\-a4c4\-024c559e91dd\.config
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4968573Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.4999769Z /github/runner_temp/git-credentials-b3c0da36-f855-4620-a4c4-024c559e91dd.config
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.5008054Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-b3c0da36\-f855\-4620\-a4c4\-024c559e91dd\.config
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.5052274Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.5079354Z /github/runner_temp/git-credentials-b3c0da36-f855-4620-a4c4-024c559e91dd.config
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.5091056Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-b3c0da36\-f855\-4620\-a4c4\-024c559e91dd\.config
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.5132934Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+static-analysis	Post Run actions/checkout@v7	2026-10-26T15:18:57.5381921Z Removing credentials config '/home/runner/work/_temp/git-credentials-b3c0da36-f855-4620-a4c4-024c559e91dd.config'
+static-analysis	Complete job	﻿2026-10-26T15:18:57.5534961Z Cleaning up orphan processes

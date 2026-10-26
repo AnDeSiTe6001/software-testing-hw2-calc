@@ -1,0 +1,14 @@
+static-analysis	Ruff lint	﻿2026-10-26T15:17:34.3710833Z ##[group]Run ruff check --output-format=github .
+static-analysis	Ruff lint	2026-10-26T15:17:34.3711084Z [36;1mruff check --output-format=github .[0m
+static-analysis	Ruff lint	2026-10-26T15:17:34.3765535Z shell: /usr/bin/bash -e {0}
+static-analysis	Ruff lint	2026-10-26T15:17:34.3765685Z env:
+static-analysis	Ruff lint	2026-10-26T15:17:34.3766003Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Ruff lint	2026-10-26T15:17:34.3766274Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+static-analysis	Ruff lint	2026-10-26T15:17:34.3766513Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Ruff lint	2026-10-26T15:17:34.3766728Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Ruff lint	2026-10-26T15:17:34.3766941Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+static-analysis	Ruff lint	2026-10-26T15:17:34.3767157Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+static-analysis	Ruff lint	2026-10-26T15:17:34.3767339Z ##[endgroup]
+static-analysis	Ruff lint	2026-10-26T15:17:34.3908991Z ##[error]Calc.py:3:8: F401 `sys` imported but unused
+static-analysis	Ruff lint	  help: Remove unused import: `sys`
+static-analysis	Ruff lint	2026-10-26T15:17:34.3917684Z ##[error]Process completed with exit code 1.

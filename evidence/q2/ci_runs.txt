@@ -1,0 +1,10 @@
+40346569386	success	22688a5	ci: run the Calc unit tests on GitHub Actions
+40346669176	failure	45c893f	Change modulo implementation to math.fmod
+40346780600	success	04b295a	Revert "Change modulo implementation to math.fmod"
+40346874312	failure	64fe306	Change modulo implementation to math.fmod
+40347187097	success	fe71518	fix: restore floored modulo (a % b) so CI passes
+40347601284	success	b124f99	ci: add branch coverage (100% gate) and ruff static analysis
+40347743971	success	2b10f2b	ci: update actions to current major versions (Node 24)
+40347854773	failure	ff38359	Q3 demo: add an unused import (expect static analysis to fail)
+40347954515	failure	4ebc2da	Q3 demo: add negate without a test (expect coverage gate to fail)
+40348070521	success	e2020da	ci: do not apply the coverage threshold to the HTML report step
