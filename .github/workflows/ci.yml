@@ -33,7 +33,7 @@ jobs:
 
       - name: Coverage HTML report
         if: always()
-        run: coverage html
+        run: coverage html --fail-under=0  # the gate is the step above; always produce the report
 
       - uses: actions/upload-artifact@v7
         if: always()
