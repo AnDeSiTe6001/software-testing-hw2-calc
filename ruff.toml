@@ -1,0 +1,9 @@
+# Static analysis settings used by CI (Question 3)
+line-length = 100
+target-version = "py313"
+# Q7/agent_calc and Q7/q1_calc are frozen snapshots kept as evidence; do not lint or change them
+extend-exclude = ["Q7/agent_calc", "Q7/q1_calc"]
+
+[lint]
+# pycodestyle errors/warnings, Pyflakes, and flake8-bugbear
+select = ["E", "F", "W", "B"]

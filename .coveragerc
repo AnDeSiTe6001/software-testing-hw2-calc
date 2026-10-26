@@ -1,0 +1,8 @@
+# Coverage settings used by CI (Question 3)
+[run]
+branch = True
+include = Calc.py
+
+[report]
+show_missing = True
+fail_under = 100

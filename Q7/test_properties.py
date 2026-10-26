@@ -116,7 +116,8 @@ class CalcProperties:
         as_ints = self.calc.add(a, b)
         as_floats = self.calc.add(float(a), float(b))
         self.assertEqual(as_ints is None, as_floats is None,
-                         f"add({a}, {b}) -> {as_ints!r} but add({float(a)}, {float(b)}) -> {as_floats!r}")
+                         f"add({a}, {b}) -> {as_ints!r} but "
+                         f"add({float(a)}, {float(b)}) -> {as_floats!r}")
         if as_ints is not None:
             self.assertEqual(as_ints, as_floats)
 
