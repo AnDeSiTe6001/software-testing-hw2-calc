@@ -133,6 +133,17 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calc.power(10.0, 400), None)
         self.assertEqual(calc.power(1e308, 2), None)
 
+    def test_power_no_real_result(self):
+        calc = Calculator()
+        # A negative base with a fractional exponent has no real result
+        # (Python would return a complex number), so it raises ValueError
+        with self.assertRaises(ValueError):
+            calc.power(-8, 0.5)
+        with self.assertRaises(ValueError):
+            calc.power(-2.0, 1.5)
+        # A negative base with a whole-number float exponent is still real
+        self.assertEqual(calc.power(-2, 2.0), 4.0)
+
 
 if __name__ == "__main__":
     unittest.main()
