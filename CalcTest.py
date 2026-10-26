@@ -100,6 +100,18 @@ class TestCalculator(unittest.TestCase):
         # Decision (c): power(0, 0) is 1
         self.assertEqual(calc.power(0, 0), 1)
 
+    def test_power_negative_exponent(self):
+        calc = Calculator()
+        # Decision (c): a negative exponent returns a float
+        result = calc.power(2, -1)
+        self.assertEqual(result, 0.5)
+        self.assertIsInstance(result, float)
+        self.assertEqual(calc.power(-2, -2), 0.25)
+
+        # 0 to a negative power is a division by zero, so it raises ValueError like divide
+        with self.assertRaises(ValueError):
+            calc.power(0, -1)
+
 
 if __name__ == "__main__":
     unittest.main()
