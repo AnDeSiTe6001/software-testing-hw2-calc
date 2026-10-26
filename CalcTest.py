@@ -6,9 +6,9 @@ class TestCalculator(unittest.TestCase):
         calc = Calculator()
         result = calc.add(2, 3)
         self.assertEqual(result, 5)  # Expect 2 + 3 = 5
-        
+
         result = calc.add('2', 3)
-        self.assertEqual(result, None) 
+        self.assertEqual(result, None)
 
         result = calc.add('2', '3')
         self.assertEqual(result, None)
@@ -28,7 +28,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(result, 2)  # Expect 5 - 3 = 2
 
         result = calc.subtract('2', 3)
-        self.assertEqual(result, None) 
+        self.assertEqual(result, None)
 
         result = calc.subtract('2', '3')
         self.assertEqual(result, None)
