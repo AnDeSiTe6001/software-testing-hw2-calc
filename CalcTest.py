@@ -91,6 +91,15 @@ class TestCalculator(unittest.TestCase):
         # Like divide, input type is checked before the zero divisor
         self.assertEqual(calc.modulo('7', 0), None)
 
+    def test_power(self):
+        calc = Calculator()
+        self.assertEqual(calc.power(2, 3), 8)  # Expect 2 ** 3 = 8
+        self.assertEqual(calc.power(-2, 3), -8)
+        self.assertEqual(calc.power(5, 0), 1)
+
+        # Decision (c): power(0, 0) is 1
+        self.assertEqual(calc.power(0, 0), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
