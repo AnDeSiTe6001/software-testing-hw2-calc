@@ -91,4 +91,14 @@ class Calculator:
         if a == 0 and b < 0:
             raise ValueError("Cannot raise zero to a negative power")
 
-        return a ** b
+        try:
+            c = a ** b
+            if isinstance(c, float) and math.isinf(c):
+                raise OverflowError("the result is too large.")
+            if isinstance(c, int) and (c < self.INT32_MIN or c > self.INT32_MAX):
+                raise OverflowError("the result is too large.")
+        except OverflowError:
+            print("Overflow error: the result is too large.")
+            return None
+
+        return c
