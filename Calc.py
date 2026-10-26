@@ -1,6 +1,5 @@
 import math
 import operator
-import sys
 
 class Calculator:
     INT32_MIN = -2147483648       # -2**31
