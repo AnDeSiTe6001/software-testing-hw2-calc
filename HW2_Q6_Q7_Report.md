@@ -60,11 +60,13 @@ agent 在寫任何 modulo/power 測試**之前**，用一次四題的選擇題�
 
 ### 6.3 各 Cycle 敘述
 
+> **審查方式說明**：每次審查時我都選擇「核准，照此 commit」，沒有另外附文字意見。各 cycle「我的審查意見（草稿）」中「核准」以外的說明是 agent 草擬的，繳交前請改寫成自己的意見。
+
 #### Cycle 1：`test_modulo`（基本餘數 + floored 負數規則）
 
 - **測試**：`modulo(7,3)==1`、`modulo(6,3)==0`、`modulo(-7,3)==2`、`modulo(7,-3)==-2`、`modulo(-7,-3)==-1`。
 - **紅燈**：`AttributeError: 'Calculator' object has no attribute 'modulo'`。
-- **我的審查意見**：核准。負數案例三種正負號組合都涵蓋到了。
+- **我的審查意見（草稿）**：核准。負數案例三種正負號組合都涵蓋到了。
 - **Agent 的修改**：新增 `def modulo(self, a, b): return a % b`。Python 的 `%` 本來就是 floored 語意，所以一行就讓測試通過。
 - **重構**：無。
 - **設計說明**：如果先只測 `modulo(7,3)` 再另開一個負數 cycle，負數測試在 `a % b` 下會直接通過，無法先看到紅燈。所以 agent 把決策跟基本案例放進同一個測試，讓決策在實作前就寫成測試。
@@ -74,7 +76,7 @@ agent 在寫任何 modulo/power 測試**之前**，用一次四題的選擇題�
 
 - **測試**：`modulo(7, 0)` 與 `modulo(7, 0.0)` 都要 raise `ValueError`。
 - **紅燈**：`ZeroDivisionError: integer modulo by zero`。Python 預設丟的是另一種例外。
-- **我的審查意見**：核准。另外測了 float 的 `0.0`，可以確保 `b == 0` 的判斷對 int 與 float 都成立。
+- **我的審查意見（草稿）**：核准。另外測了 float 的 `0.0`，可以確保 `b == 0` 的判斷對 int 與 float 都成立。
 - **Agent 的修改**：在 `modulo` 開頭加上 `if b == 0: raise ValueError("Cannot modulo by zero")`。
 - **重構**：無。
 - Commits：`7665751` → `f2efb6e`
@@ -83,7 +85,7 @@ agent 在寫任何 modulo/power 測試**之前**，用一次四題的選擇題�
 
 - **測試**：`modulo('7',3)`、`modulo(7,'3')`、`modulo('7','3')` 都回傳 `None`；另外 `modulo('7', 0)` 也回傳 `None`，代表**先檢查型別、再檢查除數為零**。
 - **紅燈**：`TypeError: not all arguments converted during string formatting`。`'7' % 3` 被 Python 當成字串格式化運算子，這是 Python 特有的陷阱。
-- **我的審查意見**：核准，也同意「先檢查型別」的順序（agent 在審查時有明確指出這是它自己加的決策）。
+- **我的審查意見（草稿）**：核准，也同意「先檢查型別」的順序（agent 在審查時有明確指出這是它自己加的決策）。
 - **Agent 的修改**：加入與其他運算相同的 `isinstance` 檢查，非數字時印出訊息並回傳 `None`。
 - **重構**：無。
 - Commits：`6b55792` → `2e3043c`
@@ -94,7 +96,7 @@ agent 在寫任何 modulo/power 測試**之前**，用一次四題的選擇題�
 
 - **測試**：`power(2,3)==8`、`power(-2,3)==-8`、`power(5,0)==1`、`power(0,0)==1`。
 - **紅燈**：`AttributeError: 'Calculator' object has no attribute 'power'`。
-- **我的審查意見**：核准。
+- **我的審查意見（草稿）**：核准。
 - **Agent 的修改**：新增 `def power(self, a, b): return a ** b`。
 - **重構**：無。
 - Commits：`d8205d7` → `b831c69`
@@ -103,7 +105,7 @@ agent 在寫任何 modulo/power 測試**之前**，用一次四題的選擇題�
 
 - **測試**：`power(2,-1) == 0.5` 且型別為 `float`、`power(-2,-2) == 0.25`、`power(0,-1)` raise `ValueError`。
 - **紅燈**：`ZeroDivisionError: 0.0 cannot be raised to a negative power`。
-- **我的審查意見**：核准。agent 在審查時主動說明：「回傳 float」那幾行在 cycle 4 的 `a ** b` 下**已經會通過**，真正造成紅燈的只有 `power(0, -1)`。我同意保留那幾行，作為決策 (c) 的明確編碼。
+- **我的審查意見（草稿）**：核准。agent 在審查時主動說明：「回傳 float」那幾行在 cycle 4 的 `a ** b` 下**已經會通過**，真正造成紅燈的只有 `power(0, -1)`。我同意保留那幾行，作為決策 (c) 的明確編碼。
 - **Agent 的修改**：加上 `if a == 0 and b < 0: raise ValueError(...)`。
 - **重構**：無。
 - Commits：`9bb80f2` → `a404ff6`
@@ -112,7 +114,7 @@ agent 在寫任何 modulo/power 測試**之前**，用一次四題的選擇題�
 
 - **測試**：`power('2',3)`、`power(2,'3')`、`power('2','3')` 回傳 `None`；`power(0,'-1')` 也回傳 `None`，代表型別檢查排在「0 的負次方」規則之前。
 - **紅燈**：`TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'`。
-- **我的審查意見**：核准，同意檢查順序。
+- **我的審查意見（草稿）**：核准，同意檢查順序。
 - **Agent 的修改**：加入 `isinstance` 檢查。
 - **重構**：無。
 - Commits：`e8ccfc1` → `e167a92`
@@ -121,7 +123,7 @@ agent 在寫任何 modulo/power 測試**之前**，用一次四題的選擇題�
 
 - **測試**：沿用第 1 題的 int32 結果範圍，並測試邊界：`power(2,30)==1073741824`、`power(-2,31)==-2147483648`（剛好等於 INT32_MIN，仍可表示）、`power(2,31)` 與 `power(10,100)` 回傳 `None`；float 溢位的 `power(10.0,400)`、`power(1e308,2)` 也回傳 `None`。
 - **紅燈**：`AssertionError: 2147483648 != None`。
-- **我的審查意見**：核准。測到 INT32_MIN 與 INT32_MAX+1 兩個邊界。
+- **我的審查意見（草稿）**：核准。測到 INT32_MIN 與 INT32_MAX+1 兩個邊界。
 - **Agent 的修改**：把 `a ** b` 包進與 add/multiply 相同的 `try/except OverflowError` 區塊，並加上 int32 與 `isinf` 檢查。Python 的 float `**` 溢位時會直接 raise `OverflowError`，不會回傳 `inf`，所以 except 區塊是必要的。
 - **重構**：無（重複的程式碼留到最後的重構步驟一起處理）。
 - Commits：`43abd8a` → `c20110a`
@@ -130,7 +132,7 @@ agent 在寫任何 modulo/power 測試**之前**，用一次四題的選擇題�
 
 - **測試**：`power(-8, 0.5)` 與 `power(-2.0, 1.5)` raise `ValueError`；對照案例 `power(-2, 2.0) == 4.0`（指數是 float 但為整數值，結果仍是實數）。
 - **紅燈**：`AssertionError: ValueError not raised`（實際回傳 `(1.7e-16+2.83j)` 這種複數）。
-- **我的審查意見**：核准。
+- **我的審查意見（草稿）**：核准。
 - **Agent 的修改**：計算後若結果為 `complex`，raise `ValueError("The result is not a real number")`。
 - **重構**：無。
 - Commits：`c77bf55` → `9dfafdc`
