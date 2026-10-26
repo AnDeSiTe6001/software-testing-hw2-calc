@@ -74,6 +74,10 @@ class Calculator:
         return c
 
     def modulo(self, a, b):
+        if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+            print("Invalid input: both arguments must be numbers.")
+            return None
+
         if b == 0:
             raise ValueError("Cannot modulo by zero")
 
